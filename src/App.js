@@ -3,7 +3,8 @@ import RacingBarChart from "./RacingBarChart";
 import useKeyframes from "./useKeyframes";
 import useWindowSize from "./useWindowSize";
 
-const dataUrl = "/data/category-brands.csv";
+import tsvData from './data.tsv'
+
 const numOfBars = 12;
 const numOfSlice = 10;
 const chartMargin = {
@@ -13,11 +14,13 @@ const chartMargin = {
   left: 10,
 };
 
+
 function App() {
+  const [duration, setDuration] = useState(500)
   const { width: windowWidth } = useWindowSize();
   const chartWidth = windowWidth - 64;
   const chartHeight = 600;
-  const keyframes = useKeyframes(dataUrl, numOfSlice);
+  const keyframes = useKeyframes(tsvData, numOfSlice);
   const chartRef = React.useRef();
   const handleReplay = () => {
     chartRef.current.replay();
@@ -37,6 +40,7 @@ function App() {
         <button onClick={playing ? handleStop : handleStart}>
           { playing ? 'stop' : 'start' }
         </button>
+        <input type="number" step="50" min="250" max="1000" onChange={e => setDuration(e.target.value * 1)} value={duration} />
         {keyframes.length > 0 && (
           <RacingBarChart
             keyframes={keyframes}
@@ -47,6 +51,7 @@ function App() {
             onStart={() => forceUpdate(true)}
             onStop={() => forceUpdate(false)}
             ref={chartRef}
+            duration={duration}
           />
         )}
       </div>

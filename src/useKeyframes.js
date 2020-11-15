@@ -1,5 +1,6 @@
 import React from "react";
-import { csv } from 'd3-fetch';
+import { tsv } from 'd3-fetch';
+import { range } from "lodash";
 
 const buildFindData = data => {
   const dataByDateAndName = new Map();
@@ -92,10 +93,29 @@ const makeKeyframes = (data, numOfSlice) => {
 function useKeyframes(dataUrl, numOfSlice) {
   const [keyframes, setKeyframes] = React.useState([]);
   React.useEffect(() => {
-    csv(dataUrl).then(data => {
-      const keyframes = makeKeyframes(data.map(d => ({ ...d, value: Number(d.value) })), numOfSlice);
+    // csv(dataUrl).then(data => {
+    //   const keyframes = makeKeyframes(data.map(d => ({ ...d, value: Number(d.value) })), numOfSlice);
+    //   setKeyframes(keyframes);
+    // });
+    tsv(dataUrl).then((data) => {
+      const transformed = range(2010, 2021).reduce((all, y) => {
+        range(4).forEach(q => {
+          const qPath = `${y}/Q${q + 1}`
+          const hasQData = data.filter(d => d[qPath]).map(d => ({
+            date: [y, String(q * 3 + 1).padStart(2, '0'), '01'].join('-'),
+            id: d['序'],
+            name: d['書名'],
+            auhtor: d['作者'],
+            category: d['分類'],
+            value: Number(d[qPath] || 0),
+          }))
+          Array.prototype.push.apply(all, hasQData)
+        })
+        return all
+      }, [])
+      const keyframes = makeKeyframes(transformed, numOfSlice);
       setKeyframes(keyframes);
-    });
+    })
   }, [dataUrl, numOfSlice]);
   return keyframes;
 }

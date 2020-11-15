@@ -5,12 +5,13 @@ import AxisTop from "./AxisTop";
 
 const AnimatedAxisTop = animated(AxisTop);
 
-const RacingAxisTop = forwardRef(({ domainMax, xMax }, ref) => {
+const RacingAxisTop = forwardRef(({ domainMax, xMax, duration }, ref) => {
   const prevDomainMaxRef = useRef(domainMax);
   const prevDomainMax = prevDomainMaxRef.current;
   const springProps = useSpring({
     from: { domainMax: prevDomainMax },
     to: { domainMax },
+    duration,
     ref
   });
   return (

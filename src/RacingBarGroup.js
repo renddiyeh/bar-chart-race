@@ -1,44 +1,51 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useMemo } from "react";
 import { useTransition, animated } from "react-spring";
 import Bar from "./Bar";
 
 const AnimatedBar = animated(Bar);
 
-const RacingBarGroup = forwardRef(({ frameData, xScale, yScale, colorScale }, ref) => {
-  const transitions = useTransition(
-    frameData.map(({ name, value }, idx) => ({
+const RacingBarGroup = forwardRef(({ frameData, xScale, yScale, colorScale, duration }, ref) => {
+  const transition = useTransition(
+    frameData.map(({ name, value, id }, idx) => ({
       y: yScale(idx),
       width: xScale(value),
       value,
-      name
+      name,
+      key: id,
     })),
-    d => d.name,
     {
+      key: item => item.key,
       initial: d => d,
       from: { y: yScale.range()[1] + 50, width: 0, value: 0 },
       leave: { y: yScale.range()[1] + 50, width: 0, value: 0 },
       enter: d => d,
       update: d => d,
-      unique: true,
       ref,
+      duration,
     }
   );
-  return transitions.map(({ item, props }) => {
-    const { y, value, width } = props;
-    const { name } = item;
+  const { x, height } = useMemo(() => {
+    return {
+      x: xScale(0),
+      height: yScale.bandwidth(),
+    }
+  }, [])
+  return transition((values, item) => {
+    const { y, value, width } = values;
+    const { name, key } = item;
     return (
       <AnimatedBar
-        x={xScale(0)}
+        x={x}
         y={y}
         width={width}
-        height={yScale.bandwidth()}
+        height={height}
         color={colorScale(name)}
         value={value.interpolate(v => v.toFixed())}
         name={name}
-        key={name}
+        key={key}
       />
     );
-  });
+  })
 });
 
 export default RacingBarGroup;

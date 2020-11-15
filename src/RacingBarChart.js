@@ -13,6 +13,7 @@ const RacingBarChart = React.forwardRef(({
   keyframes,
   onStart,
   onStop,
+  duration,
 }, ref) => {
   const [{ frameIdx, animationKey, playing }, setAnimation] = useState({
     frameIdx: 0,
@@ -22,7 +23,7 @@ const RacingBarChart = React.forwardRef(({
   const updateFrameRef = useRef();
   // when replay, increment the key to rerender the chart.
   useEffect(() => {
-    if (!updateFrameRef.current) {
+    if (!updateFrameRef.current && playing) {
       updateFrameRef.current = setTimeout(() => {
         updateFrameRef.current = null;
         setAnimation(({ frameIdx: prevFrameIdx, playing, ...others }) => {
@@ -34,7 +35,7 @@ const RacingBarChart = React.forwardRef(({
             playing: !!(playing && !isLastFrame),
           }
         });
-      }, 250);
+      }, duration);
     }
   });
   const barGroupRef = useRef();
@@ -121,7 +122,7 @@ const RacingBarChart = React.forwardRef(({
         .range(schemeTableau10),
     [nameList]
   );
-  const dateInYear = currentDate.getFullYear();
+  const dateInYear = `${currentDate.getFullYear()}Q${Math.floor(currentDate.getMonth() / 3) + 1}`;
   return (
     <svg width={width} height={height}>
       <Group top={margin.top} left={margin.left} key={animationKey}>
@@ -130,6 +131,7 @@ const RacingBarChart = React.forwardRef(({
           xScale={xScale}
           yScale={yScale}
           colorScale={colorScale}
+          duration={duration}
           ref={barGroupRef}
         />
         <text
@@ -150,6 +152,7 @@ const RacingBarChart = React.forwardRef(({
         <RacingAxisTop
           domainMax={domainMax}
           xMax={xMax}
+          duration={duration}
           ref={axisRef}
         />
       </Group>
