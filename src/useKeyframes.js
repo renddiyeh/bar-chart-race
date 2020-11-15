@@ -1,6 +1,5 @@
 import React from "react";
-import axios from "axios";
-import csvParse from "csv-parse/lib/sync";
+import { csv } from 'd3-fetch';
 
 const buildFindData = data => {
   const dataByDateAndName = new Map();
@@ -93,17 +92,8 @@ const makeKeyframes = (data, numOfSlice) => {
 function useKeyframes(dataUrl, numOfSlice) {
   const [keyframes, setKeyframes] = React.useState([]);
   React.useEffect(() => {
-    axios.get(dataUrl).then(resp => {
-      const { data: csvString } = resp;
-      const nextData = csvParse(csvString)
-        .slice(1)
-        .map(([date, name, category, value]) => ({
-          date,
-          name,
-          category,
-          value: Number(value)
-        }));
-      const keyframes = makeKeyframes(nextData, numOfSlice);
+    csv(dataUrl).then(data => {
+      const keyframes = makeKeyframes(data.map(d => ({ ...d, value: Number(d.value) })), numOfSlice);
       setKeyframes(keyframes);
     });
   }, [dataUrl, numOfSlice]);

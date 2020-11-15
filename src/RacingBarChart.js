@@ -24,6 +24,7 @@ const RacingBarChart = React.forwardRef(({
   useEffect(() => {
     if (!updateFrameRef.current) {
       updateFrameRef.current = setTimeout(() => {
+        updateFrameRef.current = null;
         setAnimation(({ frameIdx: prevFrameIdx, playing, ...others }) => {
           const isLastFrame = prevFrameIdx === keyframes.length - 1;
           const nextFrameIdx = isLastFrame ? prevFrameIdx : prevFrameIdx + 1;
@@ -33,7 +34,6 @@ const RacingBarChart = React.forwardRef(({
             playing: !!(playing && !isLastFrame),
           }
         });
-        updateFrameRef.current = null;
       }, 250);
     }
   });

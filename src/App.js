@@ -32,16 +32,6 @@ function App() {
   const [_, forceUpdate] = useState();
   return (
     <div style={{ margin: "0 2em" }}>
-      <h1>Bar Chart Race Demo</h1>
-      <section>
-        This is a bar chart race of the value (in million dollars) of top global brands, during 2000 ~ 2019.
-        <br/>
-        It's inspired by <a target="_blank" rel="noopener noreferrer" href="https://observablehq.com/@d3/bar-chart-race">the work of Mike Bostock</a>, which is based on pure d3.
-        I tried to make a similar one, but using React, <a target="_blank" rel="noopener noreferrer" href="https://www.react-spring.io/">react-spring</a> and <a href="https://vx-demo.now.sh/" rel="noopener noreferrer" target="_blank">vx</a>.
-        <br/>
-        source: <a rel="noopener noreferrer" href="https://github.com/chenesan/bar-chart-race" target="_blank">https://github.com/chenesan/bar-chart-race</a>
-        <br/>
-      </section>
       <div style={{ paddingTop: "1em"}}>
         <button onClick={handleReplay}>replay</button>
         <button onClick={playing ? handleStop : handleStart}>
