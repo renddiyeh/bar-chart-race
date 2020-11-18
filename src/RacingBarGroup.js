@@ -6,11 +6,13 @@ const AnimatedBar = animated(Bar);
 
 const RacingBarGroup = forwardRef(({ frameData, xScale, yScale, colorScale, duration }, ref) => {
   const transition = useTransition(
-    frameData.map(({ name, value, id }, idx) => ({
+    frameData.map(({ name, value, category, author, id }, idx) => ({
       y: yScale(idx),
       width: xScale(value),
       value,
       name,
+      category,
+      author,
       key: id,
     })),
     {
@@ -32,16 +34,17 @@ const RacingBarGroup = forwardRef(({ frameData, xScale, yScale, colorScale, dura
   }, [])
   return transition((values, item) => {
     const { y, value, width } = values;
-    const { name, key } = item;
+    const { category, name, author, key } = item;
     return (
       <AnimatedBar
         x={x}
         y={y}
         width={width}
         height={height}
-        color={colorScale(name)}
+        color={colorScale(category)}
         value={value.interpolate(v => v.toFixed())}
         name={name}
+        author={author}
         key={key}
       />
     );

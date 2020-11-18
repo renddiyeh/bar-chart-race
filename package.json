@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {
     "@vx/axis": "0.0.199",
+    "@vx/clip-path": "0.0.199",
     "@vx/group": "0.0.199",
+    "@vx/legend": "0.0.199",
     "@vx/scale": "0.0.199",
     "@vx/shape": "0.0.199",
     "@vx/text": "0.0.199",

@@ -105,7 +105,7 @@ function useKeyframes(dataUrl, numOfSlice) {
             date: [y, String(q * 3 + 1).padStart(2, '0'), '01'].join('-'),
             id: d['序'],
             name: d['書名'],
-            auhtor: d['作者'],
+            author: d['作者'],
             category: d['分類'],
             value: Number(d[qPath] || 0),
           }))
