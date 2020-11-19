@@ -10,7 +10,7 @@ const numOfSlice = 10;
 const chartMargin = {
   top: 180,
   right: 60,
-  bottom: 20,
+  bottom: 76,
   left: 120,
 };
 const ratio = 667 / 640
@@ -40,6 +40,7 @@ function App() {
           { playing ? 'stop' : 'start' }
         </button>
         <input type="number" step="50" min="100" max="1000" onChange={e => setDuration(e.target.value * 1)} value={duration} />
+        <div style={{ height: '2em' }}></div>
         {keyframes.length > 0 && (
           <RacingBarChart
             keyframes={keyframes}

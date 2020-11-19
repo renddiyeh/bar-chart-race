@@ -132,11 +132,20 @@ const RacingBarChart = React.forwardRef(({
   const totalFormated = s(total)
   return (
     <svg width={width} height={height}>
-      <text y="40" x={width / 2} textAnchor="middle" fontWeight="700" fontSize="28px" fontFamily="Noto Sans TC">過去十年大家都看了哪些書？</text>
-      <line x1="0" y1="60" x2={width} y2="60" stroke="black" strokeWidth="2"></line>
+      <Group top={4} left={94}>
+        <path d="M486.88,28.87H450.06v29.4a3.55,3.55,0,0,0,3.54,3.54h33.28L474,45.34Z" fill="#f7931e" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.12"/>
+        <path d="M1.06,28.87H37.88v29.4a3.55,3.55,0,0,1-3.54,3.54H1.06L13.92,45.34Z" fill="#f7931e" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.12"/>
+        <rect x="30.06" y="1.06" width="428" height="54.69" rx="4.66" stroke-width="2.12" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#ffc027"/>
+        <text transform="translate(49.34 37.42)" font-size="28" font-family="Noto Sans TC" letter-spacing="0.08em" fontWeight="bold">100秒看完中文書十年暢銷榜</text>
+        <g>
+          <line x1="37.88" y1="6.41" x2="449.97" y2="6.41" fill="#ffc027" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          <line x1="37.88" y1="50.41" x2="449.97" y2="50.41" fill="#ffc027" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        </g>
+      </Group>
+      {/* <line x1="0" y1="80" x2={width} y2="80" stroke="black" strokeWidth="2"></line> */}
       <LegendOrdinal scale={colorScale}>
         {labels => (
-          <Group top="80">
+          <Group top="90" left="76">
             {labels.map((label, i) => {
               const xPos = lengendScale(i)
               return (
@@ -232,7 +241,9 @@ const RacingBarChart = React.forwardRef(({
           ref={axisRef}
         />
       </Group>
-      {/* <rect x={0} y={height - margin.bottom + 40} width={width} height={margin.bottom - 40} fill="#CCCCCC"></rect> */}
+      <line x1={0} y1={height - margin.bottom + 30} x2={width} y2={height - margin.bottom + 30} stroke="black" strokeWidth="2"></line>
+      <rect x={0} y={height - margin.bottom + 30} width={width} height={margin.bottom - 30} fill="#CCCCCC"></rect>
+      <text fontSize="16px" x={width / 2} y={height - 16} textAnchor="middle" fontFamily="Noto Sans TC" fontWeight="bold">博客來 x Re-lab 共同製作</text>
     </svg>
   );
 });
