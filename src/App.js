@@ -8,17 +8,17 @@ import tsvData from './data.tsv'
 const numOfBars = 10;
 const numOfSlice = 10;
 const chartMargin = {
-  top: 160,
+  top: 180,
   right: 60,
-  bottom: 120,
-  left: 100,
+  bottom: 20,
+  left: 120,
 };
-const ratio = 697 / 640
+const ratio = 667 / 640
 
 function App() {
   const [duration, setDuration] = useState(250)
   const { width: windowWidth } = useWindowSize();
-  const chartWidth = windowWidth - 64;
+  const chartWidth = Math.min(720, windowWidth) - 64;
   const keyframes = useKeyframes(tsvData, numOfSlice);
   const chartRef = React.useRef();
   const handleReplay = () => {
@@ -33,7 +33,7 @@ function App() {
   const playing = chartRef.current ? chartRef.current.playing : false;
   const [_, forceUpdate] = useState();
   return (
-    <div style={{ margin: "0 2em" }}>
+    <div style={{ margin: "0 auto", maxWidth: 720 }}>
       <div style={{ paddingTop: "1em"}}>
         <button onClick={handleReplay}>replay</button>
         <button onClick={playing ? handleStop : handleStart}>

@@ -1,0 +1,20 @@
+<svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.18 33.14">
+  <g>
+    <path d="M9.25,6.48,7.32,3.59,5.39.69a.64.64,0,0,0-1,0L2.44,3.59.52,6.48c-.23.34,0,.77.51.77H3.67V27.52a1.21,1.21,0,1,0,2.42,0V7.25H8.74A.52.52,0,0,0,9.25,6.48Z" fill="#f2f2f2" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.87"/>
+    <g>
+      <rect x="22.35" y="2.35" width="17.25" height="21.28" stroke-width="1.15" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="#fff"/>
+      <rect x="18.9" y="5.23" width="17.25" height="21.28" stroke-width="0.86" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="#fbb03b"/>
+      <polygon points="22.35 2.35 18.9 5.22 36.15 5.22 39.6 2.35 22.35 2.35" fill="#f7931e" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.86"/>
+      <polygon points="36.15 26.5 39.6 23.63 39.6 2.35 36.15 5.22 36.15 26.5" fill="#f2f2f2" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.86"/>
+      <line x1="37.88" y1="5.97" x2="37.88" y2="23.05" fill="#fff" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.58"/>
+      <rect x="14.76" y="8.56" width="17.25" height="21.28" stroke-width="1.15" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="#fff"/>
+      <rect x="11.31" y="11.44" width="17.25" height="21.28" stroke-width="0.86" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="#fbb03b"/>
+      <polygon points="14.76 8.56 11.31 11.44 28.56 11.44 32.01 8.56 14.76 8.56" fill="#f7931e" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.86"/>
+      <polygon points="28.56 32.71 32.01 29.84 32.01 8.56 28.56 11.44 28.56 32.71" fill="#f2f2f2" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.86"/>
+      <line x1="30.29" y1="12.18" x2="30.29" y2="29.26" fill="#fff" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.58"/>
+    </g>
+    <line x1="1.18" y1="12.02" x2="1.18" y2="20.08" fill="#f2f2f2" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.85"/>
+    <line x1="8.31" y1="22.18" x2="8.31" y2="27.84" fill="#f2f2f2" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.87"/>
+    <line x1="8.31" y1="19.61" x2="8.31" y2="17.98" fill="#f2f2f2" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.87"/>
+  </g>
+</svg>

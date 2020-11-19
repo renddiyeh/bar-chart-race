@@ -4,7 +4,7 @@ import Bar from "./Bar";
 
 const AnimatedBar = animated(Bar);
 
-const RacingBarGroup = forwardRef(({ frameData, xScale, yScale, colorScale, duration }, ref) => {
+const RacingBarGroup = forwardRef(({ frameData, xScale, yScale, colorScale, duration, xMax }, ref) => {
   const transition = useTransition(
     frameData.map(({ name, value, category, author, id }, idx) => ({
       y: yScale(idx),
@@ -46,6 +46,8 @@ const RacingBarGroup = forwardRef(({ frameData, xScale, yScale, colorScale, dura
         name={name}
         author={author}
         key={key}
+        id={key}
+        xMax={xMax}
       />
     );
   })
