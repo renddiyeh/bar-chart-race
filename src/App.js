@@ -8,17 +8,17 @@ import tsvData from './data.tsv'
 const numOfBars = 10;
 const numOfSlice = 10;
 const chartMargin = {
-  top: 180,
-  right: 60,
-  bottom: 76,
-  left: 120,
+  top: 240,
+  right: 100,
+  bottom: 84,
+  left: 122,
 };
-const ratio = 667 / 640
+const chaartSize = [1440, 940]
+const canvasWidth = 960
 
 function App() {
   const [duration, setDuration] = useState(250)
   const { width: windowWidth } = useWindowSize();
-  const chartWidth = Math.min(720, windowWidth) - 64;
   const keyframes = useKeyframes(tsvData, numOfSlice);
   const chartRef = React.useRef();
   const handleReplay = () => {
@@ -33,7 +33,7 @@ function App() {
   const playing = chartRef.current ? chartRef.current.playing : false;
   const [_, forceUpdate] = useState();
   return (
-    <div style={{ margin: "0 auto", maxWidth: 720 }}>
+    <div style={{ margin: "0 auto", maxWidth: canvasWidth }}>
       <div style={{ paddingTop: "1em"}}>
         <button onClick={handleReplay}>replay</button>
         <button onClick={playing ? handleStop : handleStart}>
@@ -45,14 +45,15 @@ function App() {
           <RacingBarChart
             keyframes={keyframes}
             numOfBars={numOfBars}
-            width={chartWidth}
-            height={chartWidth * ratio}
+            windowWidth={windowWidth}
+            width={chaartSize[0]}
+            height={chaartSize[1]}
             margin={chartMargin}
             onStart={() => forceUpdate(true)}
             onStop={() => forceUpdate(false)}
             ref={chartRef}
             duration={duration}
-            ratio={ratio}
+            ratio={chaartSize[1] / chaartSize[0]}
           />
         )}
       </div>

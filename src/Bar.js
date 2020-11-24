@@ -30,7 +30,7 @@ const Bar = ({ color, x, y, width, height, name, value, author, id, xMax }) => {
         height={height}
         fill={color}
         stroke="black"
-        strokeWidth="1"
+        strokeWidth="2"
       />
       <VxText
         x={x - 10}
@@ -39,15 +39,16 @@ const Bar = ({ color, x, y, width, height, name, value, author, id, xMax }) => {
         verticalAnchor="middle"
         fontFamily="Noto Sans TC"
         width={50}
-        fontSize="14px"
+        fontSize="16px"
+        fontWeight="700"
       >
         {lines}
       </VxText>
-      <VxText x={x + lableX - 10} y={y + 4 + height / 2} textAnchor="end" fontWeight="500" fontFamily="Noto Sans TC" fontSize="14px" clipPath={`url(#clip-${id})`}>
+      <VxText x={x + lableX - 10} y={y + 8 + height / 2} textAnchor="end" fontWeight="700" fontFamily="Noto Sans TC" fontSize="24" clipPath={`url(#clip-${id})`}>
         {name}
       </VxText>
-      <VxText x={x + lableX + 10} y={y + 5 + height / 2} fontFamily="Noto Sans TC" fontSize="20px" fontWeight="700" fill="#333333">
-        {s(value)}
+      <VxText x={x + lableX + 10} y={y + 8 + height / 2} fontFamily="Noto Sans TC" fontSize="24" fontWeight="700">
+        {value > 20000 ? '爆！' : ''}
       </VxText>
     </React.Fragment>
   );
