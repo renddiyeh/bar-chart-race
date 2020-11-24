@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="93.87" height="79.75">
+  <g>
+    <g>
+      <path d="M26.18,45.57H14.68a14,14,0,0,1,0-28h7v7h-7a7,7,0,0,0,0,14h11.5Z" fill="#ffc027" stroke="#333" stroke-miterlimit="10" stroke-width="1.37"/>
+      <path d="M67.68,45.57h11.5a14,14,0,0,0,0-28h-7v7h7a7,7,0,0,1,0,14H67.68Z" fill="#ffc027" stroke="#333" stroke-miterlimit="10" stroke-width="1.37"/>
+      <path d="M19.61,6.85V29a26.79,26.79,0,0,0,22.9,26.51V76.74h9.32V55.49A26.79,26.79,0,0,0,74.74,29V6.85Z" fill="#ffc027" stroke="#333" stroke-miterlimit="10" stroke-width="1.37"/>
+      <rect x="28.54" y="71.3" width="37.28" height="7.77" rx="2.73" fill="#ffc027" stroke="#333" stroke-miterlimit="10" stroke-width="1.37"/>
+      <path d="M47.86,19.22,51,25.56a.78.78,0,0,0,.57.42l7,1A.77.77,0,0,1,59,28.3l-5.06,4.93a.77.77,0,0,0-.22.68l1.19,7a.77.77,0,0,1-1.11.81l-6.25-3.29a.75.75,0,0,0-.71,0l-6.26,3.29a.77.77,0,0,1-1.11-.81l1.2-7a.77.77,0,0,0-.22-.68L35.37,28.3A.77.77,0,0,1,35.79,27l7-1a.79.79,0,0,0,.57-.42l3.13-6.34A.76.76,0,0,1,47.86,19.22Z" fill="#fbb03b" stroke="#333" stroke-miterlimit="10" stroke-width="1.51"/>
+      <rect x="17.66" y="0.63" width="59.02" height="13.98" rx="2.07" fill="#ffc027" stroke="#333" stroke-miterlimit="10" stroke-width="1.27"/>
+      <line x1="22.68" y1="5.07" x2="50.13" y2="5.07" fill="#ffc027" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line x1="54.26" y1="5.07" x2="57.64" y2="5.07" fill="#ffc027" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>
