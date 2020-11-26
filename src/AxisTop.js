@@ -19,7 +19,7 @@ const AxisTop = (props) => {
         left={0}
         scale={xScaleForAxis}
         hideAxisLine
-        tickLabelProps={() => ({ textAnchor: 'middle', dy: '-0.5em', fontSize: 12, fontFamily: 'Noto Sans TC', fill: '#666666', fontWeight: 700 })}
+        tickLabelProps={() => ({ textAnchor: 'middle', dy: '-0.5em', fontSize: 24, fontFamily: 'Noto Sans TC', fill: '#666666', fontWeight: 700 })}
         numTicks={numTicks}
       />
     </>

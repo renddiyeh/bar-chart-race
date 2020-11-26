@@ -8,7 +8,7 @@ import tsvData from './data.tsv'
 const numOfBars = 10;
 const numOfSlice = 10;
 const chartMargin = {
-  top: 240,
+  top: 250,
   right: 100,
   bottom: 84,
   left: 122,
