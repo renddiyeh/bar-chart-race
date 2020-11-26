@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/bar-chart-race/static/css/main.ee88f47c.chunk.css",
-    "main.js": "/bar-chart-race/static/js/main.0729cec8.chunk.js",
-    "main.js.map": "/bar-chart-race/static/js/main.0729cec8.chunk.js.map",
+    "main.js": "/bar-chart-race/static/js/main.a0c95ba2.chunk.js",
+    "main.js.map": "/bar-chart-race/static/js/main.a0c95ba2.chunk.js.map",
     "runtime-main.js": "/bar-chart-race/static/js/runtime-main.5fc0406a.js",
     "runtime-main.js.map": "/bar-chart-race/static/js/runtime-main.5fc0406a.js.map",
-    "static/js/2.f8cf588c.chunk.js": "/bar-chart-race/static/js/2.f8cf588c.chunk.js",
-    "static/js/2.f8cf588c.chunk.js.map": "/bar-chart-race/static/js/2.f8cf588c.chunk.js.map",
+    "static/js/2.94423f1e.chunk.js": "/bar-chart-race/static/js/2.94423f1e.chunk.js",
+    "static/js/2.94423f1e.chunk.js.map": "/bar-chart-race/static/js/2.94423f1e.chunk.js.map",
     "index.html": "/bar-chart-race/index.html",
     "static/css/main.ee88f47c.chunk.css.map": "/bar-chart-race/static/css/main.ee88f47c.chunk.css.map",
-    "static/js/2.f8cf588c.chunk.js.LICENSE.txt": "/bar-chart-race/static/js/2.f8cf588c.chunk.js.LICENSE.txt",
+    "static/js/2.94423f1e.chunk.js.LICENSE.txt": "/bar-chart-race/static/js/2.94423f1e.chunk.js.LICENSE.txt",
     "static/media/author.21b8307b.svg": "/bar-chart-race/static/media/author.21b8307b.svg",
-    "static/media/data.cb5be84b.tsv": "/bar-chart-race/static/media/data.cb5be84b.tsv",
+    "static/media/data.9564e833.tsv": "/bar-chart-race/static/media/data.9564e833.tsv",
     "static/media/trophy.11d2151a.svg": "/bar-chart-race/static/media/trophy.11d2151a.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.5fc0406a.js",
-    "static/js/2.f8cf588c.chunk.js",
+    "static/js/2.94423f1e.chunk.js",
     "static/css/main.ee88f47c.chunk.css",
-    "static/js/main.0729cec8.chunk.js"
+    "static/js/main.a0c95ba2.chunk.js"
   ]
 }
