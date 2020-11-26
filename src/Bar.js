@@ -3,15 +3,16 @@ import { Bar as VxBar } from "@vx/shape";
 import { Text as VxText } from "@vx/text";
 import { RectClipPath } from '@vx/clip-path'
 
-import { format } from 'd3-format'
+// import { format } from 'd3-format'
 
-const s = format(".2s")
+// const s = format(".2s")
 
 const Bar = ({ color, x, y, width, height, name, value, author, id, xMax }) => {
   const lines = useMemo(() => {
     const l = author.length
     const sep = Math.floor(l / 2)
-    return l > 8 ? `${author.substring(0, sep)}\n${author.substring(sep)}` : author
+    if (/[\w\s]+/.test(author)) return author
+    return l > 7 ? `${author.substring(0, sep)}\n${author.substring(sep)}` : author
   }, [author])
   const lableX = Math.min(width, xMax)
   return (
