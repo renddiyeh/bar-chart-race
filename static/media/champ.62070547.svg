@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="202" height="121.27">
+  <g>
+    <text transform="translate(0 87.41)" font-size="32.37" fill="#333" font-family="Noto Sans TC" letter-spacing="0.04em" font-weight="bold">本季暢銷冠軍</text>
+    <line x1="2.29" y1="106.2" x2="198.79" y2="106.2" fill="#29abe2" stroke="#1a1a1a" stroke-miterlimit="10" stroke-width="3"/>
+    <line x1="2.29" y1="44.2" x2="198.79" y2="44.2" fill="#29abe2" stroke="#1a1a1a" stroke-miterlimit="10" stroke-width="3"/>
+    <g>
+      <path d="M130.56,8.51,116.07,20.44a1.57,1.57,0,0,1-2.35-.4l-2-3.3L103.08,2.36a1.78,1.78,0,0,0-3,0L91.37,16.74l-2,3.3a1.57,1.57,0,0,1-2.35.4L72.55,8.51a1,1,0,0,0-1.71.81V41.6h61.43V9.32A1,1,0,0,0,130.56,8.51Z" fill="#ffc027" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <rect x="69.11" y="35.28" width="64.89" height="7.7" stroke-width="3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#ffc027"/>
+      <line x1="127.5" y1="19.28" x2="127.5" y2="30.18" fill="#ffc027" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <rect x="98.5" y="18.28" width="7" height="11" rx="3.5" stroke-width="3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#f15a24"/>
+    </g>
+  </g>
+</svg>
