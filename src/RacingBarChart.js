@@ -133,7 +133,7 @@ const RacingBarChart = React.forwardRef(({
   const y = currentDate.getFullYear()
   const q = Math.floor(currentDate.getMonth() / 3)
   const quarter = `Q${q + 1}`;
-  const nthQ = (y - 2010) * 4 + q - 3
+  // const nthQ = (y - 2010) * 4 + q - 3
   // const legendBandwidth = lengendScale.bandwidth()
   return (
     <svg style={{ width: '100%', border: '1px solid', background: '#f2f2f2' }} viewBox={`0 0 ${width} ${height}`}>
@@ -195,7 +195,7 @@ const RacingBarChart = React.forwardRef(({
           xMax={xMax}
           ref={barGroupRef}
         />
-        <Group left={0} top={yMax - 200}>
+        <Group left={0} top={yMax - 240}>
           <text
             textAnchor="end"
             fontSize="64"
@@ -219,9 +219,9 @@ const RacingBarChart = React.forwardRef(({
             strokeLinecap="round"
           ></line>
         </Group>
-        <Group left={xMax - 400} top={yMax - 120}>
+        <Group left={xMax - 400} top={yMax - 150}>
           <Champ />
-          <image x="240" y="-20" width="150" href={imgs[nthQ].default} />
+          <image x="240" y="-40" width="150" href={imgs[frameData[0].id]} />
         </Group>
         
         <RacingAxisTop

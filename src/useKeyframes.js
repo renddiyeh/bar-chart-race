@@ -103,7 +103,7 @@ function useKeyframes(dataUrl, numOfSlice) {
           const qPath = `${y}/Q${q + 1}`
           const hasQData = data.filter(d => d[qPath]).map(d => ({
             date: [y, String(q * 3 + 1).padStart(2, '0'), '01'].join('-'),
-            id: d['序'],
+            id: d['店內碼'],
             name: d['書名'],
             author: d['作者'],
             category: d['分類'],
