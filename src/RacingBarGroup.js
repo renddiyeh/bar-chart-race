@@ -23,7 +23,9 @@ const RacingBarGroup = forwardRef(({ frameData, xScale, yScale, colorScale, dura
       enter: d => d,
       update: d => d,
       ref,
-      duration,
+      config: {
+        // duration,
+      },
     }
   );
   const { x, height } = useMemo(() => {

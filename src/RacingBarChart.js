@@ -11,7 +11,6 @@ import { ReactComponent as Trophy } from './trophy.svg'
 import { ReactComponent as Champ } from './champ.svg'
 
 import imgs from './imgs'
-import { nth } from "lodash";
 
 const categories = ['文學小說', '商業理財', '生活旅遊', '心理勵志', '其他']
 
@@ -105,8 +104,8 @@ const RacingBarChart = React.forwardRef(({
   });
   const frame = keyframes[frameIdx];
   const { date: currentDate, data: frameData } = frame;
-  const values = frameData.map(({ value }) => value);
-  const total = values.reduce((sum, d) => sum + d, 0)
+  // const values = frameData.map(({ value }) => value);
+  // const total = values.reduce((sum, d) => sum + d, 0)
   const xMax = width - margin.left - margin.right;
   const yMax = height - margin.top - margin.bottom;
   // const domainMax = Math.max(...values);
@@ -137,29 +136,29 @@ const RacingBarChart = React.forwardRef(({
   // const legendBandwidth = lengendScale.bandwidth()
   return (
     <svg style={{ width: '100%', border: '1px solid', background: '#f2f2f2' }} viewBox={`0 0 ${width} ${height}`}>
-        <line x1="274.74" y1="189" x2="274.74" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
-        <line x1="426.97" y1="189" x2="426.97" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
-        <line x1="579.74" y1="189" x2="579.74" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
-        <line x1="731.97" y1="189" x2="731.97" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
-        <line x1="882.74" y1="189" x2="882.74" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
-        <line x1="1034.97" y1="189" x2="1034.97" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
-        <line x1="1187.74" y1="189" x2="1187.74" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
-        <line x1="1339.97" y1="189" x2="1339.97" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
-        <line x1="122.5" y1="189" x2="122.5" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
-        <line x1="3" y1="189" x2="3" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
-        <line x1="3" y1="220.89" x2="1442" y2="220.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
-        <line x1="3" y1="272.89" x2="1442" y2="272.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
-        <line x1="3" y1="324.89" x2="1442" y2="324.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
-        <line x1="3" y1="376.89" x2="1442" y2="376.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
-        <line x1="3" y1="428.89" x2="1442" y2="428.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
-        <line x1="3" y1="480.89" x2="1442" y2="480.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
-        <line x1="3" y1="532.89" x2="1442" y2="532.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
-        <line x1="3" y1="584.89" x2="1442" y2="584.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
-        <line x1="3" y1="636.89" x2="1442" y2="636.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
-        <line x1="3" y1="688.89" x2="1442" y2="688.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
-        <line x1="3" y1="740.89" x2="1442" y2="740.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
-        <line x1="3" y1="792.89" x2="1442" y2="792.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
-        <line x1="3" y1="844.89" x2="1442" y2="844.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
+      <line x1="274.74" y1="189" x2="274.74" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
+      <line x1="426.97" y1="189" x2="426.97" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
+      <line x1="579.74" y1="189" x2="579.74" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
+      <line x1="731.97" y1="189" x2="731.97" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
+      <line x1="882.74" y1="189" x2="882.74" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
+      <line x1="1034.97" y1="189" x2="1034.97" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
+      <line x1="1187.74" y1="189" x2="1187.74" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
+      <line x1="1339.97" y1="189" x2="1339.97" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
+      <line x1="122.5" y1="189" x2="122.5" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
+      <line x1="3" y1="189" x2="3" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
+      <line x1="3" y1="220.89" x2="1442" y2="220.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
+      <line x1="3" y1="272.89" x2="1442" y2="272.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
+      <line x1="3" y1="324.89" x2="1442" y2="324.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
+      <line x1="3" y1="376.89" x2="1442" y2="376.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
+      <line x1="3" y1="428.89" x2="1442" y2="428.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
+      <line x1="3" y1="480.89" x2="1442" y2="480.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
+      <line x1="3" y1="532.89" x2="1442" y2="532.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
+      <line x1="3" y1="584.89" x2="1442" y2="584.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
+      <line x1="3" y1="636.89" x2="1442" y2="636.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
+      <line x1="3" y1="688.89" x2="1442" y2="688.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
+      <line x1="3" y1="740.89" x2="1442" y2="740.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
+      <line x1="3" y1="792.89" x2="1442" y2="792.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
+      <line x1="3" y1="844.89" x2="1442" y2="844.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
       <rect x="0" y="0" width={width} height="134" fill="#333333"></rect>
       <Group left={214} top={31}>
         <Trophy />
