@@ -229,13 +229,13 @@ const RacingBarChart = React.forwardRef(({
           <image x="240" y="-40" width="150" href={imgs[winner[nthQ]]} />
         </Group>
         
-        <RacingAxisTop
+        {/* <RacingAxisTop
           domainMax={domainMax}
           xMax={xMax}
           yMax={yMax}
           duration={duration}
           ref={axisRef}
-        />
+        /> */}
       </Group>
       <line x1={0} y1={height - margin.bottom + 30} x2={width} y2={height - margin.bottom + 30} stroke="black" strokeWidth="2"></line>
       <rect x={0} y={height - margin.bottom + 30} width={width} height={margin.bottom - 30} fill="#CCCCCC"></rect>
