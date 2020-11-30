@@ -2,7 +2,6 @@ import React, { useEffect, useImperativeHandle, useMemo, useRef, useState, useLa
 import { scaleLinear, scaleBand, scaleOrdinal } from "@vx/scale";
 import { Group } from "@vx/group";
 import { LegendOrdinal } from '@vx/legend';
-import { format } from 'd3-format'
 
 import RacingAxisTop from "./RacingAxisTop";
 import RacingBarGroup from "./RacingBarGroup";
@@ -11,6 +10,8 @@ import { ReactComponent as Trophy } from './trophy.svg'
 import { ReactComponent as Champ } from './champ.svg'
 
 import imgs from './imgs'
+import winner from './winner.json'
+import { differenceInQuarters, format, isBefore, subDays } from "date-fns";
 
 const categories = ['文學小說', '商業理財', '生活旅遊', '心理勵志', '其他']
 
@@ -129,10 +130,14 @@ const RacingBarChart = React.forwardRef(({
       }),
     [numOfBars, yMax]
   );
-  const y = currentDate.getFullYear()
-  const q = Math.floor(currentDate.getMonth() / 3)
+  // let dateToShow = subDays(currentDate, 15)
+  let dateToShow = currentDate
+  if (isBefore(dateToShow, keyframes[0].date)) dateToShow = keyframes[0].date
+  const y = dateToShow.getFullYear()
+  const q = Math.floor(dateToShow.getMonth() / 3)
   const quarter = `Q${q + 1}`;
-  // const nthQ = (y - 2010) * 4 + q - 3
+  const nthQ = differenceInQuarters(dateToShow, keyframes[0].date)
+  // console.log(nthQ)
   // const legendBandwidth = lengendScale.bandwidth()
   return (
     <svg style={{ width: '100%', border: '1px solid', background: '#f2f2f2' }} viewBox={`0 0 ${width} ${height}`}>
@@ -195,6 +200,7 @@ const RacingBarChart = React.forwardRef(({
           ref={barGroupRef}
         />
         <Group left={0} top={yMax - 240}>
+          <text y={-120} x={xMax} textAnchor="end" fill="#333333" fontFamily="Noto Sans TC" fontSize="20">{format(dateToShow, 'yyyy-MM-dd')}</text>
           <text
             textAnchor="end"
             fontSize="64"
@@ -220,7 +226,7 @@ const RacingBarChart = React.forwardRef(({
         </Group>
         <Group left={xMax - 400} top={yMax - 150}>
           <Champ />
-          <image x="240" y="-40" width="150" href={imgs[frameData[0].id]} />
+          <image x="240" y="-40" width="150" href={imgs[winner[nthQ]]} />
         </Group>
         
         <RacingAxisTop

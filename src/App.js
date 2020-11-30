@@ -6,7 +6,7 @@ import useWindowSize from "./useWindowSize";
 import tsvData from './data.tsv'
 
 const numOfBars = 10;
-const numOfSlice = 1;
+const numOfSlice = 10;
 const chartMargin = {
   top: 250,
   right: 100,
