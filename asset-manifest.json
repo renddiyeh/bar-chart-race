@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/bar-chart-race/static/css/main.ee88f47c.chunk.css",
-    "main.js": "/bar-chart-race/static/js/main.ad0ea728.chunk.js",
-    "main.js.map": "/bar-chart-race/static/js/main.ad0ea728.chunk.js.map",
+    "main.js": "/bar-chart-race/static/js/main.f59fbbe2.chunk.js",
+    "main.js.map": "/bar-chart-race/static/js/main.f59fbbe2.chunk.js.map",
     "runtime-main.js": "/bar-chart-race/static/js/runtime-main.5fc0406a.js",
     "runtime-main.js.map": "/bar-chart-race/static/js/runtime-main.5fc0406a.js.map",
-    "static/js/2.50735de6.chunk.js": "/bar-chart-race/static/js/2.50735de6.chunk.js",
-    "static/js/2.50735de6.chunk.js.map": "/bar-chart-race/static/js/2.50735de6.chunk.js.map",
+    "static/js/2.593842d1.chunk.js": "/bar-chart-race/static/js/2.593842d1.chunk.js",
+    "static/js/2.593842d1.chunk.js.map": "/bar-chart-race/static/js/2.593842d1.chunk.js.map",
     "index.html": "/bar-chart-race/index.html",
     "static/css/main.ee88f47c.chunk.css.map": "/bar-chart-race/static/css/main.ee88f47c.chunk.css.map",
-    "static/js/2.50735de6.chunk.js.LICENSE.txt": "/bar-chart-race/static/js/2.50735de6.chunk.js.LICENSE.txt",
+    "static/js/2.593842d1.chunk.js.LICENSE.txt": "/bar-chart-race/static/js/2.593842d1.chunk.js.LICENSE.txt",
     "static/media/0010333343.jpg": "/bar-chart-race/static/media/0010333343.b753bb09.jpg",
     "static/media/0010445221.jpg": "/bar-chart-race/static/media/0010445221.6c52066c.jpg",
     "static/media/0010488192.jpg": "/bar-chart-race/static/media/0010488192.22229f95.jpg",
@@ -44,13 +44,13 @@
     "static/media/author.21b8307b.svg": "/bar-chart-race/static/media/author.21b8307b.svg",
     "static/media/bang.149ab3c5.svg": "/bar-chart-race/static/media/bang.149ab3c5.svg",
     "static/media/champ.62070547.svg": "/bar-chart-race/static/media/champ.62070547.svg",
-    "static/media/data.6db9dbdb.tsv": "/bar-chart-race/static/media/data.6db9dbdb.tsv",
+    "static/media/data.65d8cdb9.tsv": "/bar-chart-race/static/media/data.65d8cdb9.tsv",
     "static/media/trophy.11d2151a.svg": "/bar-chart-race/static/media/trophy.11d2151a.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.5fc0406a.js",
-    "static/js/2.50735de6.chunk.js",
+    "static/js/2.593842d1.chunk.js",
     "static/css/main.ee88f47c.chunk.css",
-    "static/js/main.ad0ea728.chunk.js"
+    "static/js/main.f59fbbe2.chunk.js"
   ]
 }
