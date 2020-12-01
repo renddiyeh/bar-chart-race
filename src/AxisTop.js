@@ -6,7 +6,7 @@ import { GridColumns } from '@vx/grid';
 
 const AxisTop = (props) => {
   const { domainMax, xMax, yMax } = props;
-  const numTicks = xMax > 500 ? 5 : Math.floor(xMax / 100);
+  const numTicks = 3
   const xScaleForAxis = scaleLinear({
     domain: [0, domainMax],
     range: [0, xMax]
@@ -19,7 +19,15 @@ const AxisTop = (props) => {
         left={0}
         scale={xScaleForAxis}
         hideAxisLine
-        tickLabelProps={() => ({ textAnchor: 'middle', dy: '-0.5em', fontSize: 24, fontFamily: 'Noto Sans TC', fill: '#666666', fontWeight: 700 })}
+        tickLabelProps={(n, i) => ({
+          textAnchor: 'middle',
+          dy: '-0.5em',
+          fontSize: 24,
+          fontFamily: 'Noto Sans TC',
+          fill: '#666666',
+          opacity: (i === 0 || i === 4 ) ? 1 : 0,
+          fontWeight: 700,
+        })}
         numTicks={numTicks}
       />
     </>

@@ -131,17 +131,16 @@ const RacingBarChart = React.forwardRef(({
     [numOfBars, yMax]
   );
   // let dateToShow = subDays(currentDate, 15)
-  let dateToShow = currentDate
-  if (isBefore(dateToShow, keyframes[0].date)) dateToShow = keyframes[0].date
+  const dateToShow = subDays(currentDate, 45)
   const y = dateToShow.getFullYear()
   const q = Math.floor(dateToShow.getMonth() / 3)
   const quarter = `Q${q + 1}`;
-  const nthQ = differenceInQuarters(dateToShow, keyframes[0].date)
+  const nthQ = differenceInQuarters(currentDate, keyframes[0].date)
   // console.log(nthQ)
   // const legendBandwidth = lengendScale.bandwidth()
   return (
     <svg style={{ width: '100%', border: '1px solid', background: '#f2f2f2' }} viewBox={`0 0 ${width} ${height}`}>
-      <line x1="274.74" y1="189" x2="274.74" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
+      {/* <line x1="274.74" y1="189" x2="274.74" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
       <line x1="426.97" y1="189" x2="426.97" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
       <line x1="579.74" y1="189" x2="579.74" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
       <line x1="731.97" y1="189" x2="731.97" y2="891" fill="#29abe2" stroke="#b3b3b3" strokeWidth="1.48" opacity="0.47"/>
@@ -163,7 +162,7 @@ const RacingBarChart = React.forwardRef(({
       <line x1="3" y1="688.89" x2="1442" y2="688.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
       <line x1="3" y1="740.89" x2="1442" y2="740.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
       <line x1="3" y1="792.89" x2="1442" y2="792.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
-      <line x1="3" y1="844.89" x2="1442" y2="844.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/>
+      <line x1="3" y1="844.89" x2="1442" y2="844.89" fill="#29abe2" stroke="#b3b3b3" strokeWidth="0.96" opacity="0.47"/> */}
       <rect x="0" y="0" width={width} height="134" fill="#333333"></rect>
       <Group left={214} top={31}>
         <Trophy />
@@ -171,7 +170,7 @@ const RacingBarChart = React.forwardRef(({
       <Group left={1133} top={31}>
         <Trophy />
       </Group>
-      <text y="90" x={width / 2} fontSize="68" fontFamily="Noto Sans TC" letterSpacing="0.12em" fontWeight="bold" textAnchor="middle" fill="white">100秒看完十年暢銷榜</text>
+      <text y="90" x={width / 2} fontSize="68" fontFamily="Noto Sans TC" letterSpacing="0.12em" fontWeight="bold" textAnchor="middle" fill="white">100秒看完10年暢銷榜</text>
       <line x1="0" y1="134" x2={width} y2="134" stroke="black" strokeWidth="2"></line>
       <LegendOrdinal scale={colorScale}>
         {labels => (
@@ -200,7 +199,7 @@ const RacingBarChart = React.forwardRef(({
           ref={barGroupRef}
         />
         <Group left={0} top={yMax - 240}>
-          <text y={-120} x={xMax} textAnchor="end" fill="#333333" fontFamily="Noto Sans TC" fontSize="20">{format(dateToShow, 'yyyy-MM-dd')}</text>
+          {/* <text y={-120} x={xMax} textAnchor="end" fill="#333333" fontFamily="Noto Sans TC" fontSize="20">{format(currentDate, 'yyyy-MM-dd')}</text> */}
           <text
             textAnchor="end"
             fontSize="64"
@@ -229,13 +228,13 @@ const RacingBarChart = React.forwardRef(({
           <image x="240" y="-40" width="150" href={imgs[winner[nthQ]]} />
         </Group>
         
-        {/* <RacingAxisTop
+        <RacingAxisTop
           domainMax={domainMax}
           xMax={xMax}
           yMax={yMax}
           duration={duration}
           ref={axisRef}
-        /> */}
+        />
       </Group>
       <line x1={0} y1={height - margin.bottom + 30} x2={width} y2={height - margin.bottom + 30} stroke="black" strokeWidth="2"></line>
       <rect x={0} y={height - margin.bottom + 30} width={width} height={margin.bottom - 30} fill="#CCCCCC"></rect>

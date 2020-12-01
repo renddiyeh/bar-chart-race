@@ -1,6 +1,7 @@
 import React from "react";
 import { tsv } from 'd3-fetch';
 import { range } from "lodash";
+import { addDays, format } from "date-fns";
 
 const buildFindData = data => {
   const dataByDateAndName = new Map();
@@ -102,7 +103,7 @@ function useKeyframes(dataUrl, numOfSlice) {
         range(4).forEach(q => {
           const qPath = `${y}/Q${q + 1}`
           const hasQData = data.filter(d => d[qPath]).map(d => ({
-            date: [y, String(q * 3 + 1).padStart(2, '0'), '01'].join('-'),
+            date: ([y, String(q * 3 + 2).padStart(2, '0'), '15'].join('-')),
             id: d['店內碼'],
             name: d['書名'],
             author: d['作者'],

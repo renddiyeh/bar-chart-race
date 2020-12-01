@@ -24,7 +24,7 @@ const RacingBarGroup = forwardRef(({ frameData, xScale, yScale, colorScale, dura
       update: d => d,
       ref,
       config: {
-        // duration,
+        // duration: duration / 2,
       },
     }
   );
