@@ -6,7 +6,7 @@ import { GridColumns } from '@vx/grid';
 
 const AxisTop = (props) => {
   const { domainMax, xMax, yMax } = props;
-  const numTicks = 3
+  const numTicks = 1
   const xScaleForAxis = scaleLinear({
     domain: [0, domainMax],
     range: [0, xMax]
@@ -25,7 +25,7 @@ const AxisTop = (props) => {
           fontSize: 24,
           fontFamily: 'Noto Sans TC',
           fill: '#666666',
-          opacity: (i === 0 || i === 4 ) ? 1 : 0,
+          // opacity: (i === 0 || i === 4 ) ? 1 : 0,
           fontWeight: 700,
         })}
         numTicks={numTicks}

@@ -1,13 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="202" height="121.27">
+<svg xmlns="http://www.w3.org/2000/svg" width="33" height="22">
   <g>
-    <text transform="translate(0 87.41)" font-size="32.37" fill="#333" font-family="Noto Sans TC" letter-spacing="0.04em" font-weight="bold">本季暢銷冠軍</text>
-    <line x1="2.29" y1="106.2" x2="198.79" y2="106.2" fill="#29abe2" stroke="#1a1a1a" stroke-miterlimit="10" stroke-width="3"/>
-    <line x1="2.29" y1="44.2" x2="198.79" y2="44.2" fill="#29abe2" stroke="#1a1a1a" stroke-miterlimit="10" stroke-width="3"/>
-    <g>
-      <path d="M130.56,8.51,116.07,20.44a1.57,1.57,0,0,1-2.35-.4l-2-3.3L103.08,2.36a1.78,1.78,0,0,0-3,0L91.37,16.74l-2,3.3a1.57,1.57,0,0,1-2.35.4L72.55,8.51a1,1,0,0,0-1.71.81V41.6h61.43V9.32A1,1,0,0,0,130.56,8.51Z" fill="#ffc027" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-      <rect x="69.11" y="35.28" width="64.89" height="7.7" stroke-width="3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#ffc027"/>
-      <line x1="127.5" y1="19.28" x2="127.5" y2="30.18" fill="#ffc027" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-      <rect x="98.5" y="18.28" width="7" height="11" rx="3.5" stroke-width="3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#f15a24"/>
-    </g>
+    <path d="M30.27,4.48l-6.88,5.67A.74.74,0,0,1,22.28,10l-.94-1.57L17.22,1.56a.84.84,0,0,0-1.44,0L11.66,8.39,10.72,10a.74.74,0,0,1-1.11.19L2.73,4.48a.5.5,0,0,0-.82.38V20.19H31.09V4.86A.5.5,0,0,0,30.27,4.48Z" fill="#ffc027" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.42"/>
+    <rect x="1.09" y="17.19" width="30.82" height="3.65" stroke-width="1.42" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#ffc027"/>
+    <line x1="28.82" y1="9.6" x2="28.82" y2="14.77" fill="#ffc027" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.42"/>
+    <rect x="15.05" y="9.12" width="3.32" height="5.22" rx="1.66" stroke-width="1.42" stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="#f15a24"/>
   </g>
 </svg>

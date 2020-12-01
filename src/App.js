@@ -14,7 +14,7 @@ const chartMargin = {
   left: 122,
 };
 const chaartSize = [1440, 940]
-const canvasWidth = 960
+const canvasWidth = 1200
 
 function App() {
   const [duration, setDuration] = useState(250)
@@ -33,7 +33,7 @@ function App() {
   const playing = chartRef.current ? chartRef.current.playing : false;
   const [_, forceUpdate] = useState();
   return (
-    <div style={{ margin: "0 auto", maxWidth: canvasWidth }}>
+    <div style={{ margin: "0 auto", maxWidth: canvasWidth, paddingBottom: '50px' }}>
       <div style={{ paddingTop: "1em"}}>
         <button onClick={handleReplay}>replay</button>
         <button onClick={playing ? handleStop : handleStart}>

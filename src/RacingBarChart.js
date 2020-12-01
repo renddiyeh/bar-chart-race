@@ -198,34 +198,54 @@ const RacingBarChart = React.forwardRef(({
           xMax={xMax}
           ref={barGroupRef}
         />
-        <Group left={0} top={yMax - 240}>
+        <Group left={xMax - 360} top={yMax - 170}>
           {/* <text y={-120} x={xMax} textAnchor="end" fill="#333333" fontFamily="Noto Sans TC" fontSize="20">{format(currentDate, 'yyyy-MM-dd')}</text> */}
           <text
-            textAnchor="end"
-            fontSize="64"
-            x={xMax}
+            fontSize="58"
+            x={0}
             y={0}
             fontWeight="700"
             fontFamily="Noto Sans TC"
             fill="#333333"
           >
             {y}年
-            <tspan dx="-10" fontSize="120" fill="#ffc027" stroke="black" strokeWidth="4"> {quarter}</tspan>
+          </text>
+          <text
+            fontSize="120"
+            fill="#ffc027"
+            stroke="black"
+            strokeWidth="4"
+            fontWeight="700"
+            fontFamily="Noto Sans TC"
+            x={10}
+            y={130}
+          >
+            {quarter}
           </text>
           <line
-            x1={xMax - 400}
-            y1={30}
-            x2={xMax}
-            y2={30}
+            x1={210}
+            y1={-50}
+            x2={210}
+            y2={170}
             stroke="#b3b3b3"
             strokeWidth="3"
             strokeDasharray="16"
             strokeLinecap="round"
           ></line>
-        </Group>
-        <Group left={xMax - 400} top={yMax - 150}>
-          <Champ />
-          <image x="240" y="-40" width="150" href={imgs[winner[nthQ]]} />
+            
+          <Group left={280} top={-48}>
+            <Champ />
+          </Group>
+          <text
+            fontSize="20"
+            fill="#333333"
+            fontWeight="700"
+            fontFamily="Noto Sans TC"
+            x={293}
+            y={0}
+            textAnchor="middle"
+          >本季暢銷冠軍</text>
+          <image x="245" y="15" width="100" href={imgs[winner[nthQ]]} />
         </Group>
         
         <RacingAxisTop
